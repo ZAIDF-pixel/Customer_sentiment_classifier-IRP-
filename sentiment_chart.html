@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer sentiment distribution</title>
+    <link rel="stylesheet" href="sentiment_chart.css">
+  </head>
+  <body>
+    <main class="chart-card">
+      <header>
+        <p class="eyebrow">CUSTOMER FEEDBACK</p>
+        <h1>Sentiment distribution</h1>
+        <p class="subtitle">Live analytics exported from the local SQLite database.</p>
+      </header>
+      <div class="chart-layout">
+        <div class="chart-wrap">
+          <canvas id="sentimentChart" aria-label="Sentiment distribution pie chart" role="img"></canvas>
+          <div id="chartTooltip" class="tooltip" role="status" hidden></div>
+        </div>
+        <div id="sentimentLegend" class="legend" aria-label="Chart categories"></div>
+      </div>
+      <p id="chartStatus" class="status">Loading database analytics…</p>
+    </main>
+    <script src="sentiment_chart.js"></script>
+  </body>
+</html>
